@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Лаба15</title>
+</head>
+<body>
+	<div>Лабораторная работа №15: События. Введение в обработку событий. Обработчики событий.</div><br>
+	
+	<div id="rect" onclick="displayMessage()" style="width:50px; height:50px; background-color:blue;"></div><br>
+	
+	<a href="HTMLlabs" onclick="return handler(this)">Страница 1</a>
+	<script>
+		function displayMessage() {
+			alert('Нажато');
+		}
+		
+		function handler(obj) {
+			alert(obj.href);
+			return false;
+		}
+	</script>
+	
+	<h3>1.</h3>
+
+    <a href="HTMLlab15.2.html"><strong>Следующая страница</strong></a>
+</body>
+</html>

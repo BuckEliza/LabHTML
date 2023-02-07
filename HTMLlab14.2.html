@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Лаба14</title>
+</head>
+<body>
+	<div>Лабораторная работа №14: Объект Element. Управление элементами. Изменение стиля элементов.</div><br>
+	
+	<div class="article">
+		<h3>Заголовок статьи</h3>
+		<p>Первый абзац</p>
+		<p>Второй абзац</p>
+	</div>
+	<script>
+		var articleDiv = document.querySelector("div.article");
+		console.log(articleDiv.innerText);
+		console.log("_______________________");
+		console.log(articleDiv.innerHTML);
+		
+		var pElement = document.querySelectorAll("div.article p")[0];
+		pElement.innerText = "hello";
+		pElement.textContent = "hello";
+	</script>
+	
+	<h3>2.</h3>
+
+    <a href="HTMLlab14.3.html"><strong>Следующая страница</strong></a>
+</body>
+</html>

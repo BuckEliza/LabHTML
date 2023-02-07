@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Лаба14</title>
+	<style>
+		.blueStyle {
+			color: blue;
+			font-family: Verdana;
+		}
+		.article {
+			font-size: 20px;
+		}
+	</style>
+</head>
+<body>
+	<div>Лабораторная работа №14: Объект Element. Управление элементами. Изменение стиля элементов.</div><br>
+	
+	<div class="article">
+		<h3>Заголовок статьи</h3>
+		<p>Первый абзац</p>
+		<p>Второй абзац</p>
+	</div>
+	<script>
+		var articleDiv = document.querySelector("div.article");
+		// установка нового класса
+		articleDiv.className = "blueStyle";
+		// получаем название класса
+		document.write(articleDiv.className);
+		// удаляем класс
+		articleDiv.classList.remove("article");
+		// добавляем класс
+		articleDiv.classList.add("blueStyle");
+		// переключаем класс
+		articleDiv.classList.toggle("article");
+	</script>
+	
+	<h3>6.</h3>
+
+    <a href="HTMLlabs.html"><strong>Назад</strong></a>
+</body>
+</html>

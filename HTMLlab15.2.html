@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Лаба15</title>
+	<style>
+		#rect {
+			width: 50px;
+			height: 50px;
+			background-color: green;
+		}
+	</style>
+</head>
+<body>
+	<div>Лабораторная работа №15: События. Введение в обработку событий. Обработчики событий.</div><br>
+	
+	<div id="rect"></div>
+	<script>
+		var click = 0;
+		
+		function handlerOne(e) {
+			alert(e.type);
+	    }
+		
+		function handlerTwo(e) {
+			click++;
+			var newNode = document.createElement("p");
+			newNode.textContent = "произошло нажатие" + click;
+			document.body.appendChild(newNode);
+		}
+		var rect = document.getElementById("rect");
+		// прикрепляем первый обработчик
+		rect.addEventListener("click", handlerOne);
+		// прикрепляем второй обработчик
+		rect.addEventListener("click", handlerTwo);
+	</script>
+	<h3>2.</h3>
+
+    <a href="HTMLlab15.3.html"><strong>Следующая страница</strong></a>
+</body>
+</html>

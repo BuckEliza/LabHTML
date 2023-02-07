@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta http-equiv="content-type" content="text/html" charset="utf-8">
+    <title>Лаба2</title>
+</head>
+
+<body>
+    <div id="numer">Лабораторная работа №2: Основы HTML/CSS.</div><br />
+
+    <h3>Задание.</h3>
+
+    <div>
+        <p>Прямой наследник (первый уровень)</p>
+        <span>
+            <span>
+                <p>Третий уровень</p>
+            </span>
+        </span>
+        <p>Прямой наследник (первый уровень)</p>
+        <span>
+            <p>Второй уровень</p>
+        </span>
+        <p>Прямой наследник (первый уровень)</p>
+    </div><br />
+
+    <h3>5.</h3>
+
+    <a href="HTMLlabs.html"><strong>Назад</strong></a>
+</body>
+
+</html>
+<style>
+    div {
+        color: blue;
+    }
+
+    div > p {
+        background-color: orchid;
+    }
+
+    div > span > p{
+        background-color: yellow;
+    }
+
+    div > span > span > p {
+        background-color: chartreuse;
+    }
+
+    #numer {
+        color: black;
+    }
+</style>

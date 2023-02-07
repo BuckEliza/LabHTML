@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Video</title>
+    <link rel="stylesheet" href="lab11/lab11.2.css">
+</head>
+
+<body>
+    <!--Данная страница не завершена-->
+    <div>Лабораторная работа №11: Media API. Управление видео из JavaScript.</div><br>
+
+    <video width="400" height="300">
+		<source src="video/foggy.webm" type="video/webm">
+	</video>
+
+    <div id="controls" class="hidden">
+        <a id="playBtn">Play</a>
+        <span id="timer">00:00</span>
+        <input type="range" step="0.1" min="0" max="1" value="0" id="jostic" />
+        <input type="range" step="0.1" min="0" max="1" value="0" id="volume" />
+    </div>
+
+    <script src="lab11/lab11.2.js"></script>
+
+    <h3>2.</h3>
+
+    <a href="HTMLlabs.html"><strong>Назад</strong></a>
+</body>
+
+</html>

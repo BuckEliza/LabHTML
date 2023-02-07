@@ -1,0 +1,67 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Лаба16</title>
+	<style>
+		html,
+		body {
+			margin: 0;
+			overflow: hidden;
+		}
+		#blueRect {
+			width: 80px;
+			height: 80px;
+			background-color: blue;
+		}
+	</style>
+</head>
+<!--Данная страница не завершена-->
+<body>
+	<div>Лабораторная работа №16: События мыши. События клавиатуры.</div><br>
+	<h3>Задание.</h3>
+	<div id="blueRect"></div>
+	
+	<script>
+		function moveRect(e) {
+			var blueRect = document.getElementById("blueRect");
+			// получаем стиль для blueRect
+			var cs = window.getComputedStyle(blueRect);
+			
+			var left = parseInt(cs.marginLeft);
+			var top = parseInt(cs.marginTop);
+			var insertKey = parseInt(cs.marginInsert);
+			
+			switch (e.keyCode) {
+				case 37: // если нажата клавиша влево
+					if (left > 0)
+						blueRect.style.marginLeft = left - 15 + "px";
+					break;
+				case 38: // если нажата клавиша вверх
+					if (top > 0)
+						blueRect.style.marginTop = top - 15 + "px";
+					break;
+				case 39: // если нажата клавиша вправо
+					if (left < document.documentElement.clientWidth - 100)
+						blueRect.style.marginLeft = left + 15 + "px";
+					break;
+				case 40: // если нажата клавиша вниз
+					if (top < document.documentElement.clientHeight - 100)
+						blueRect.style.marginTop = top + 15 + "px";
+					break;
+				case 41: //
+					if (insertKey > 0)
+						blueRect.style.marginInsert = background-color + "white";
+					break;
+			}
+		}
+		
+		addEventListener("keydown", moveRect);
+	</script>
+	
+	<h3>4.</h3>
+
+    <a href="HTMLlabs.html"><strong>Назад</strong></a>
+</body>
+</html>
