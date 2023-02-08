@@ -4,16 +4,14 @@ var videoEl = document.getElementsByTagName('video')[0],
     vidControls = document.getElementById('controls'),
     volumeControl = document.getElementById('volume'),
     timePicker = document.getElementById('timer');
-josticControl = document.getElementById('jostic'); //!!!!!!!!!!!!!
 
 //если браузер может воспроизводить видео удаляем класс
 videoEl.addEventListener('canplaythrough', function() {
     vidControls.classList.remove('hidden');
     videoEl.volume = volumeControl.value;
-    videoEl.video = josticControl.value;
 }, false);
 
-//запускаем или останавливаем воспроизведение
+//запускаем или останавливаем воспроизведение 
 playBtn.addEventListener('click', function() {
     if (videoEl.paused) {
         videoEl.play();
@@ -42,9 +40,6 @@ videoEl.addEventListener('timeupdate', function() {
     timePicker.innerHTML = secondsToTime(videoEl.currentTime);
 }, false);
 
-josticControl.addEventListener('input', function() {
-    videoEl.video = josticControl.value;
-}, false);
 //рассчет отображаемого времени
 function secondsToTime(time) {
     var h = Math.floor(time / (60 * 60)),
