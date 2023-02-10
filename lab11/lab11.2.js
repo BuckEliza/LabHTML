@@ -4,6 +4,10 @@ var videoEl = document.getElementsByTagName('video')[0],
     vidControls = document.getElementById('controls'),
     volumeControl = document.getElementById('volume'),
     timePicker = document.getElementById('timer');
+progress = document.getElementById('progress')
+
+videoEl.ontimeupdate = progressUpdate;
+progress.onclick = videoRewind;
 
 //если браузер может воспроизводить видео удаляем класс
 videoEl.addEventListener('canplaythrough', function() {
@@ -67,4 +71,23 @@ function secondsToTime(time) {
         fulltime = h + ':' + m + ':' + s;
     }
     return fulltime;
+}
+
+function progressUpdate() {
+    console.log(videoEl.duration);
+    console.log(videoEl.currentTime);
+    let d = videoEl.duration;
+    let c = videoEl.currentTime;
+    progress.value = 100 * c / d;
+}
+
+function videoRewind() {
+    let w = this.offsetWidth;
+    let o = event.offsetX;
+    console.log(w);
+    console.log(o);
+    this.value = 100 * o / w;
+    //videoEl.pause();
+    videoEl.currentTime = videoEl.duration * (o / w);
+    //videoEl.play();
 }

@@ -1,6 +1,3 @@
-
-document.write("Ctrl + Shift + J");
-
 let name = "Ilya";
 alert(`hello ${1}`);
 alert(`hello ${"name"}`);
@@ -11,20 +8,27 @@ alert(`hello ${name}`);
 console.log("Постфиксный инкремент");
 var a = 0;
 while (true) {
-	if (a < 5) {
-		console.log(a++);
-	} else {
-		break;
-	}
+    if (a < 5) {
+        console.log(a++);
+    } else {
+        break;
+    }
 }
 console.log(" ");
 //Префиксный инкремент
 console.log("Префиксный инкремент");
 var b = 0;
 while (true) {
-	if (b < 5) {
-		console.log(++b);
-	} else {
-		break;
-	}
+    if (b < 5) {
+        console.log(++b);
+    } else {
+        break;
+    }
 }
+
+//Тождественное сравнение
+var myVar = 1234,
+    myVar2 = "1234";
+var result = myVar === myVar2;
+
+document.write("Тождественное сравнение = " + result);
