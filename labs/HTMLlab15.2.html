@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Лаба15</title>
+</head>
+
+<body>
+    <div>Лабораторная работа №15: События. Введение в обработку событий. Обработчики событий.</div><br>
+    <h3>Задание.</h3>
+
+    <div>
+        <nav class="menu">
+            <a href="HTMLlab6.1.html">Главная</a> |
+            <a href="#">О нас</a> |
+            <a href="#">Контакты</a> |
+            <a href="#" onclick="age()">Регистрация</a>
+        </nav>
+    </div><br>
+
+    <h4 id="yourAge"></h4>
+    <div id="input"></div>
+    <div onclick="ok(this)" id="submit"></div>
+
+    <script>
+        function age() {
+            var yourAge = document.getElementById('yourAge')
+            var input = document.getElementById('input');
+            var submit = document.getElementById('submit');
+
+            yourAge.innerHTML = "Ваш возраст";
+            input.innerHTML = "<input type='text'>";
+            submit.innerHTML = "<input type='submit' value='Ok'>";
+        }
+
+        function ok() {
+            alert('Пользователь нажал кнопку "Ok"');
+        }
+    </script>
+    <h3>2.</h3>
+
+    <a href="../HTMLlabs.html"><strong>Назад</strong></a>
+</body>
+
+</html>
