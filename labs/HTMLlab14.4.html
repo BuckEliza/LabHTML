@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Лаба14</title>
+    <style>
+        #rect {
+            width: 100px;
+            height: 100px;
+            background: yellow;
+            border: 3px solid orange;
+        }
+    </style>
+</head>
+
+<body>
+    <div>Лабораторная работа №14: Объект Element. Управление элементами. Изменение стиля элементов.</div><br>
+
+    <div id="rect"></div>
+    <script>
+        var rect = document.getElementById("rect");
+        console.log("offsetHeight: " + rect.offsetHeight);
+        console.log("offsetWidth: " + rect.offsetWidth);
+        console.log("clientHeight: " + rect.clientHeight);
+        console.log("clientWidth: " + rect.clientWidth);
+
+        var rect = document.getElementById("rect");
+        var clientRect = rect.getBoundingClientRect();
+        console.log("top: " + clientRect.top);
+        console.log("bottom: " + clientRect.bottom);
+        console.log("left: " + clientRect.left);
+        console.log("right: " + clientRect.right);
+    </script>
+
+    <h3>4.</h3>
+
+    <a href="HTMLlab14.5.html"><strong>Следующая страница</strong></a>
+</body>
+
+</html>

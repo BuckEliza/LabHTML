@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8">
+    <title>Псевдокласс</title>
+</head>
+
+<body>
+    <div>Лабораторная работа №4: Псевдоклассы и псевдоэлементы.</div><br>
+    <h3>
+        Задание 3. Сделать первую строку в первом абзаце курсивом! Примените class к параграфу и псевдоэлемент.
+    </h3>
+    <br />
+
+    <p class="first">
+        Tincidunt arcu non sodales neque sodales ut etiam.<br> Non blandit massa enim nec dui nunc. Pretium fusce id velit<br> ut tortor pretium viverra suspendisse potenti. Quisque egestas<br> diam in arcu cursus euismod quis viverra nibh.
+    </p>
+
+    <h3>3.</h3>
+
+    <a href="HTMLlab4.4.html"><strong>Следующая страница</strong></a>
+</body>
+
+</html>
+<style>
+    .first::first-line {
+        font-style: italic;
+    }
+</style>

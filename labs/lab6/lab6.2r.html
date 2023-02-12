@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8">
+    <title>Log in</title>
+</head>
+
+<body>
+    <div>
+        <nav class="menu">
+            <a href="../HTMLlab6.1.html">Главная</a> |
+            <a href="#">О нас</a> |
+            <a href="#">Контакты</a> |
+            <a href="lab6.2r.html">Регистрация</a>
+        </nav>
+    </div><br>
+    <form>
+        <table align="center" height="550" width="200">
+            <tr>
+                <td id="icon" colspan="2" height="100"></td>
+            </tr>
+            <tr>
+                <td class="info">Sing Up.</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td><input required placeholder="Name"></input>
+                </td>
+                <td><input placeholder="Surname"></input>
+                </td>
+            </tr>
+            <tr>
+                <td><input type="date" min="01-01-1930" max="31-12-2023"></input>
+                </td>
+                <td><input type="radio" name="s">Male</input><input type="radio" name="s">Female</input>
+                </td>
+            </tr>
+            <tr>
+                <td><input required type="email" placeholder="Email"></input>
+                </td>
+                <td><input required type="password" placeholder="Password"></input>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2"><textarea cols="55" rows="6" maxlength="200" placeholder="Bio"></textarea></td>
+            </tr>
+            <tr>
+                <td><input type="reset" value="Reset"></input>
+                </td>
+                <td><input type="submit" value="Submit" class="s"></input>
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+
+</html>
+<style>
+    .menu {
+        text-align: center;
+    }
+    
+    table {
+        background: rgb(255, 247, 0);
+        border: 5px outset orange;
+    }
+    
+    .info {
+        font-size: 200%;
+        color: gray;
+    }
+    
+    .s {
+        background-color: lawngreen;
+        color: gray;
+    }
+    
+    #icon {
+        background-image: url(230-2307007_4k-hd-me-city.jpg);
+    }
+</style>
